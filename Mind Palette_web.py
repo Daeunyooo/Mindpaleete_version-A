@@ -585,4 +585,4 @@ def home():
 
 if __name__ == '__main__':
     app.secret_key = OPENAI_API_KEY
-    app.run(debug=True, port=5073)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
