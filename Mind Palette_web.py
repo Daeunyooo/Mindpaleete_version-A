@@ -6,10 +6,11 @@ import base64
 import openai
 from io import BytesIO
 from PIL import Image 
+import os
 
 app = Flask(__name__)
 
-app.secret_key = OPENAI_API_KEY
+app.secret_key = os.environ['OPENAI_API_KEY']
 
 
 @app.route('/proxy')
